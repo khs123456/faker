@@ -5,28 +5,6 @@
 1. `/` : 메인페이지
     - 이름을 입력 받는다.
 
-`
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>짝</title>
-</head>
-<body>
-    <h1>궁합을 봐 드립니다.</h1>
-    <form action="/result">
-        <label>당신의 이름</label>
-        <input type="text" name="name1"><br>
-        <label>그분의 이름</label>
-        <input type="text" name="name2"><br>
-        <input type="submit">
-    </form>
-</body>
-</html>
-`
-
 2. `/result` : 결과페이지
     - 가짜 궁합을 보여준다.
     - csv에 입력값을 저장한다.
@@ -35,4 +13,7 @@
     - 저장된 이름들을 csv에서 불러와 출력한다
 
 
-## 2. (번외)
+## 2. (번외) faker 모듈 사용하기
+1.  `from faker import Faker` : 모듈 import 해오기.
+2.  `fake = Faker('ko_KR')` : 한국어 버전으로 결과가 나오도록 해주기.(괄호안에 비면 영어로)
+3.  'fake.name()' : 가짜 이름을 아무거나 보여준다.
